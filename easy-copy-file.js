@@ -64,6 +64,6 @@ function exists(src, dst, cb) {
   })
 }
 
-module.copy = copy
+module.exports = copy
 
 copy(src, dist)

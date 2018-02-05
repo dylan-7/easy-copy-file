@@ -1,10 +1,19 @@
 {
   "name": "easy-copy-file",
-  "version": "0.1.0",
-  "description": "",
-  "main": "src/index.js",
+  "version": "0.1.2",
+  "description": "A deep copy module for node",
+  "main": "easy-copy-file.js",
+  "engines": {
+    "node": ">= 6"
+  },
+  "files": [
+    "public",
+    "lib",
+    "src",
+    "views"
+  ],
   "scripts": {
-    "build": "node src/index.js --from build --to public",
+    "build": "node easy-copy-file.js --from build --to public",
     "clean": "rimraf public/*"
   },
   "devDependencies": {
