@@ -1,0 +1,24 @@
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+
+# misc
+/.idea
+/.project
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log*
+/.cache
+/.awcache
+
+# no too big file
+*.zip
+*.rar
+*.7z
