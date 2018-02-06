@@ -1,6 +1,6 @@
 {
   "name": "easy-copy-file",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A deep copy module for node",
   "main": "easy-copy-file.js",
   "engines": {
@@ -8,10 +8,18 @@
   },
   "files": [
     "public",
+    "build",
     "lib",
     "src",
-    "views"
+    "views",
+    "easy-copy-file.js"
   ],
+  "bugs": {
+    "url": "https://github.com/dylan-7/easy-copy-file/issues"
+  },
+  "bin": {
+    "easy-copy-file": "./easy-copy-file.js"
+  },
   "scripts": {
     "build": "node easy-copy-file.js --from build --to public",
     "clean": "rimraf public/*"
