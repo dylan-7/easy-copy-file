@@ -1,24 +1,28 @@
 {
   "name": "easy-copy-file",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "A deep copy module for node",
-  "main": "easy-copy-file.js",
+  "main": "src/easy-copy-file.js",
+  "homepage": "https://github.com/dylan-7/easy-copy-file/#readme",
   "engines": {
     "node": ">= 6"
   },
+  "keywords": [
+    "copy",
+    "tool"
+  ],
   "files": [
     "public",
     "build",
-    "lib",
+    "bin",
     "src",
-    "views",
-    "easy-copy-file.js"
+    "README.md"
   ],
   "bugs": {
     "url": "https://github.com/dylan-7/easy-copy-file/issues"
   },
   "bin": {
-    "easy-copy-file": "./easy-copy-file.js"
+    "easy-copy-file": "./bin/easy-copy-file.js"
   },
   "scripts": {
     "build": "node easy-copy-file.js --from build --to public",
@@ -31,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dylan-7/easy-copy-file"
+    "url": "git+https://github.com/dylan-7/easy-copy-file.git"
   },
   "author": "dylan",
   "license": "ISC",
