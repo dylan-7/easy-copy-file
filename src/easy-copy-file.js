@@ -10,7 +10,7 @@ if (from && to) {
   src = path.resolve(process.argv[from])
   dist = process.argv[to]
 } else {
-  console.log(chalk.red('请检查参数：--from [dir] --to [dir]'))
+  console.log(chalk.red('Please check the parameters：--from [dir] --to [dir]'))
   return
 }
 
