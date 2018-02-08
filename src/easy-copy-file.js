@@ -1,24 +1,26 @@
 const fs = require('fs-extra')
 const path = require('path')
 const chalk = require('chalk')
-const packageJson = path.resolve('package.json')
 let src,
     dist
-const inst = JSON.parse(fs.readFileSync(packageJson), 'utf-8').scripts.build,
-      arr = inst.split(' '),
-      fromIndex = arr.some(v => v === '--from') ? arr.findIndex(v => v === '--from') : false,
-      toIndex = arr.some(v => v === '--to') ? arr.findIndex(v => v === '--to') : false
+let from = process.argv.findIndex(v => v === '--from') + 1,
+    to = process.argv.findIndex(v => v === '--to') + 1
 
-
-if (arr && fromIndex && toIndex) {
-  src = path.resolve(String(arr[fromIndex + 1]))
-  dist = String(arr[toIndex + 1])
+if (from && to) {
+  src = path.resolve(process.argv[from])
+  dist = process.argv[to]
 } else {
   console.log(chalk.red('请检查参数：--from [dir] --to [dir]'))
   return
 }
 
 const copy = function(src, dst) {
+
+  if (!fs.existsSync(dst)) {
+    fs.mkdirSync(dst, 0o77, err => {
+      if (err) throw err
+    })
+  }
   
   //判断文件需要时间，必须同步
   if(fs.existsSync(src)) {

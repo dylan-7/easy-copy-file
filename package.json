@@ -1,6 +1,6 @@
 {
   "name": "easy-copy-file",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A deep copy module for node",
   "main": "src/easy-copy-file.js",
   "homepage": "https://github.com/dylan-7/easy-copy-file/#readme",
